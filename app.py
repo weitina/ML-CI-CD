@@ -45,3 +45,7 @@ def health_check():
 def get_database_info():
     db_name = os.getenv("database", "Nie znaleziono zmiennej!")
     return {"nazwa_bazy_z_render": db_name}
+
+@app.get("/")
+def read_root():
+    return {"message": "Laboratorium 06 - CI/CD"}
